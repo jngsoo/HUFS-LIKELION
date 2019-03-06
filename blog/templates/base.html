@@ -1,0 +1,48 @@
+<html>
+    <head>
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </head>
+    
+    <body>
+        
+    <div class="navbar-fixed">
+          <nav>
+              <div class="nav-wrapper blue-grey darken-4">
+                <a href="{%url 'home' %}" class="brand-logo center"><span class="orange-text text-darken-2"> HUFS LikeLion</span></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                  
+                  <!-- <li><a href="sass.html">Sass</a></li>
+                  <li><a href="badges.html">Components</a></li> -->
+                  {% if user.is_authenticated %}
+                  <li>{{user.username}}님 환영합니다!</li>
+                  <li>
+                    <a href="{% url 'logout' %}">로그아웃</a>
+                  </li>
+                  <li><a class="btn-floating btn-large cyan pulse btn waves-effect waves-orange" href="{% url 'new' %}"><i class="fas fa-edit"></i></a></li>
+                  {% else %}
+                   <li>
+                    <a href="{% url 'login' %}">로그인</a>
+                   </li>
+                  {% endif %}
+                  
+                </ul>
+              </div>
+            </nav>
+
+
+         
+    </div>
+        <br><br>
+        {% block contents %}
+
+        {% endblock %}
+
+    </body>
+</html>

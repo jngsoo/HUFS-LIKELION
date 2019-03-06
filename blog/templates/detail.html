@@ -1,0 +1,26 @@
+<html>
+
+<head>
+</head>
+
+{% extends 'base.html' %}
+
+{% block contents %}
+<body>
+
+<div class="container">
+<div class="scroll-container" tabindex="1">
+  
+        <div class="divider"></div>
+        <h1 class="center">{{blog.title}}</h1>
+        <div class="divider"></div>
+        <p>{{blog.pub_date}}</p>
+        <div class="divider"></div> 
+        <p>{{blog.body}}</p>
+        <p>{{blog.author}}</p> 
+      </div>
+    </div>
+</body>
+{% endblock %}
+</html>
+
