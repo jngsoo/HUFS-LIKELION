@@ -72,7 +72,7 @@ psycopg2-binary==2.7.7
 ptyprocess==0.6.0
 py2app==0.7.3
 pyasn1==0.4.5
-Pygments==2.2.0
+Pygments==2.7.4
 pylint==1.9.4
 pync==2.0.3
 pyobjc-core==2.5.1
